@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Website</title>
+    <style>
+        /* Add CSS styles here */
+        #navbar {
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+        
+        #navbar a {
+            float: left;
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        #main {
+            padding: 16px;
+        }
+        
+        #about {
+            display: none;
+        }
+        
+        #images {
+            display: none;
+        }
+        
+        .weather-image {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .weather-image:hover .weather-name {
+            display: block;
+        }
+        
+        .weather-name {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        // Add JavaScript code here
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#" onclick="showSection('main')">FEW DETAILS</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('images')">TYPES OF WEATHER</a>
+        <!-- Add more navbar links as needed -->
+    </div>
+
+    <div  class="weather-image">
+          <img src="https://lh4.googleusercontent.com/PqQ_KcT2CN-UgD-FT0ZruAWxJnAi5yyrtITMnMcK-RX7pK50edM_Tq3P3qgGaiY8A7r_eE7aG9YgbB45hkr6qYaagapmYurTBNoxBgFcX10MEiV9x6A89knDqMi24rkW-AC7hSyRis5c0p7RbOhSSg" alt="Weather Image">
+    </div>
+
+    <div id="about" class="section">
+         <img src="https://lh4.googleusercontent.com/F3QacuRS5OVHcVwP2-p1zJ3Nw3WMkhxd1yHTYBn2pD6xetWjYRlU3Gx5MpSJlRCaKZl164spl1sadb05kxpRl-gge83VRbxoA3lQ_1jI-ciPHZ8lePBtQy_azqSigBhv95jbHbhNzqfb_iuDWFYAMA" alt="Weather Image">
+    </div>
+
+    <div id="images" class="section">
+        <!-- Content of the Images or TYPES OF WEATHER page goes here -->
+        <h1>TYPES OF WEATHER</h1>
+        <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2014/10/04/15/07/sunset-473604_960_720.jpg" alt="Weather Image 1">
+            <div class="weather-name">Weather 1</div>
+        </div>
+        <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2020/08/30/09/28/buildings-5528981_960_720.jpg" alt="Weather Image 2">
+            <div class="weather-name">Weather 2</div>
+        </div>
+       <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2019/08/30/21/16/lake-4442337_960_720.jpg" alt="Weather Image 2">
+            <div class="weather-name">Weather 2</div>
+        </div>
+       <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2022/04/16/18/58/sky-7136828_960_720.jpg" alt="Weather Image 2">
+            <div class="weather-name">Weather 2</div>
+        </div>
+       <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2015/11/22/15/16/lightning-1056419_960_720.jpg" alt="Weather Image 2">
+            <div class="weather-name">Weather 2</div>
+       <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2013/10/27/17/14/frozen-201495_960_720.jpg" alt="Weather Image 2">
+            <div class="weather-name">Weather 2</div>
+        </div>
+       <div class="weather-image">
+            <img src="https://cdn.pixabay.com/photo/2022/02/28/15/28/sea-7039471_960_720.jpg" alt="Weather Image 2">
+            <div class="weather-name">Weather 2</div>
+        </div>
+       
+    </div>
+    
+    <script>
+        // Show the default section (main)
+        showSection('main');
+    </script>
+</body>
+</html>
